@@ -1,3 +1,6 @@
+.vs/
+**/.vs/
+
 **/bin/
 **/obj/
 **/.dart_tool/
@@ -5,6 +8,8 @@
 **/.flutter-plugins
 **/.flutter-plugins-dependencies
 **/pubspec.lock
+
 .env
+
 *.user
 *.suo
