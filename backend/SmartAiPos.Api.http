@@ -1,0 +1,46 @@
+@baseUrl = http://localhost:5000
+@token = paste-jwt-token-here
+
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@smartpos.ba",
+  "password": "Admin123!"
+}
+
+###
+
+GET {{baseUrl}}/dashboard/stats
+Authorization: Bearer {{token}}
+
+###
+
+GET {{baseUrl}}/products
+Authorization: Bearer {{token}}
+
+###
+
+POST {{baseUrl}}/sales/create
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "cashierId": "22222222-2222-2222-2222-222222222222",
+  "discountAmount": 0,
+  "paymentMethod": "Cash",
+  "items": [
+    { "productId": 1, "quantity": 2 },
+    { "productId": 2, "quantity": 1 }
+  ]
+}
+
+###
+
+GET {{baseUrl}}/ai/forecast-sales
+Authorization: Bearer {{token}}
+
+###
+
+GET {{baseUrl}}/ai/recommend-restock
+Authorization: Bearer {{token}}

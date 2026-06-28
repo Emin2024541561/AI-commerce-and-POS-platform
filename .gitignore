@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+**/.dart_tool/
+**/build/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/pubspec.lock
+.env
+*.user
+*.suo

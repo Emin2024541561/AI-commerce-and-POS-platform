@@ -1,0 +1,27 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Your_strong_password123"
+    ports:
+      - "1433:1433"
+    volumes:
+      - smart-ai-pos-sql:/var/opt/mssql
+
+  api:
+    build:
+      context: ./backend
+    environment:
+      ASPNETCORE_URLS: "http://+:5000"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=SmartAiPos;User Id=sa;Password=Your_strong_password123;TrustServerCertificate=True"
+      Jwt__Issuer: "SmartAiPos"
+      Jwt__Audience: "SmartAiPosClients"
+      Jwt__Key: "replace-this-with-a-very-long-production-secret"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - sqlserver
+
+volumes:
+  smart-ai-pos-sql:
