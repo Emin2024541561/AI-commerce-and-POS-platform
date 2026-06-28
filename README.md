@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Smart AI POS & Inventory Management System
 
 Production-grade SaaS scaffold for restaurants, cafes, and retail stores. The project includes a .NET 8 Web API, SQL Server schema and seed scripts, JWT authentication, role-based authorization, AI analytics endpoints, Docker support, and a Flutter Material 3 frontend.
@@ -83,3 +84,31 @@ flutter run -d chrome --dart-define=API_BASE_URL=http://localhost:5000
 - `database/schema.sql` contains the normalized SQL Server schema.
 - `database/seed.sql` contains static reference seed data.
 - The API has richer first-run seed logic in `backend/Data/SeedData.cs`, including 45 generated sales transactions.
+=======
+# AI-commerce-and-POS-platform
+Modern full-stack AI commerce platform built with Flutter, .NET 8 and SQL Server. Combines a Smart POS, customer shopping app, AI Shopping Assistant, intelligent recommendations, inventory prediction, sales analytics, Smart Deals, secure payments and real-time restaurant management.
+## Features
+- 🤖 AI Shopping Assistant
+- 🎯 Intelligent Recommendation System
+- 🛒 Customer Online Shopping
+- 🔍 Smart Product Search
+- 📦 Large Product Database
+- 💳 Cash & Card Payments
+- 🛍 Shopping Cart
+- 📤 Order Submission
+- 👨‍🍳 Admin Order Approval
+- 🚚 Delivery & Reservation Support
+- 🖨 POS Receipt Printing
+- 📦 Smart Inventory Management
+- 📈 Sales Analytics
+- 💰 Profit Analysis
+- 🔥 AI Smart Deals Generator
+- 📊 AI Demand Forecasting
+- 📉 Inventory Refill Prediction
+- ⭐ Best Selling Products Analysis
+- 🔄 Real-time Synchronization
+- 🔐 JWT Authentication & Authorization
+- 📱 Flutter Mobile Application
+- 🌐 .NET 8 REST API
+- 🗄 SQL Server Database
+>>>>>>> 239bb974d89b83e6e199edb122cc35adbeaf1d71
